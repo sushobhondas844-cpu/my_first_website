@@ -1,0 +1,521 @@
+body {
+    margin: 0;
+    font: 16px Arial;
+    background: #f9f9f9;
+    color: #222;
+}
+.header {
+    background: white;
+    padding: 20px 5%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.brand {
+    font: bold 24px Arial;
+    color: #0056b3;
+    float: left;
+}
+.nav {
+    float: right;
+    margin: 5px 0 0 0;
+}
+.nav a {
+    color: #222;
+    margin: 0 0 0 20px;
+    font: bold 14px Arial;
+}
+.hero {
+    background: #0056b3;
+    color: white;
+    padding: 100px 20px;
+}
+.hero input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+}
+.btn {
+    padding: 15px 30px;
+    background: #ff9900;
+    color: white;
+    border: none;
+    font: bold 16px Arial;
+    cursor: pointer;
+}
+.showcase {
+    padding: 50px 5%;
+    overflow: hidden;
+}
+.card {
+    background: white;
+    padding: 20px;
+    width: 28%;
+    float: left;
+    margin: 0 2%;
+    border: 1px solid #ddd;
+}
+.box {
+    background: white;
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+.row {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+.box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+/* ========================================= */
+/* LOGIN & HELPER MODULE                     */
+/* ========================================= */
+
+.full-width {
+    width: 100%;
+}
+
+.small-text {
+    font-size: 13px;
+    color: #c71205;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.small-text a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.small-text a:hover {
+    text-decoration: underline;
+}
+/* ========================================= */
+/* DASHBOARD MODULE                          */
+/* ========================================= */
+
+.dashboardContainer {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.sidebar {
+    width: 25%;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background: #f0f8ff;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.mainContent {
+    width: 75%;
+}
+
+.sessionCard {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sessionInfo h3 {
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.sessionInfo p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.btnSmall {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+/* ========================================= */
+/* EDUCATOR MANAGER MODULE                   */
+/* ========================================= */
+
+.managerBox {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.fullInput {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+/* ========================================= */
+/* REGISTRATION INTERACTION MODULE           */
+/* ========================================= */
+
+/* Make unselected buttons look slightly faded */
+.role-btn {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+/* Make the selected button fully visible and change its border */
+.role-btn.active {
+    opacity: 1;
+    border: 2px solid #0056b3;
+    background: #0056b3;
+}
+/* ========================================= */
+/* SEARCH DIRECTORY MODULE - UPGRADED        */
+/* ========================================= */
+
+.resultsGrid {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Slightly more space between cards */
+}
+
+.tutorCard {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Smoother corners */
+    width: 30%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tutorCard:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Styles for the mini profile pic in the search result */
+.card-profile-img {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    float: left; 
+    margin-right: 15px;
+    border: 2px solid #f0f8ff;
+}
+
+.tutorCard h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0056b3;
+}
+
+.tutorCard .occupation-tag {
+    margin: 2px 0;
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.tutorCard .tag {
+    display: inline-block;
+    background: #eef4ff;
+    color: #0056b3;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tutorCard .bio-snippet {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    min-height: 40px; /* Keeps card heights consistent */
+}
+
+.tutorCard b {
+    display: block;
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 10px;
+}
+/* ========================================= */
+/* MESSAGING MODULE - PRO FIX                */
+/* ========================================= */
+
+#message-display {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+    background: #fff;
+    height: 400px; /* Fixed height for the chat area */
+    overflow-y: auto;
+}
+
+.msg {
+    max-width: 75%;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* My Messages (Right Side) */
+.msg.sent {
+    align-self: flex-end;
+    background: #0056b3;
+    color: white;
+    border-radius: 18px 18px 2px 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Their Messages (Left Side) */
+.msg.received {
+    align-self: flex-start;
+    background: #e9e9e9;
+    color: #222;
+    border-radius: 18px 18px 18px 2px;
+}
+
+.msg-time {
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    opacity: 0.7;
+    text-align: right;
+}
+/* ========================================= */
+/* SOCIAL PROFILE MODULE - FIXED             */
+/* ========================================= */
+
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cover-photo {
+    background: #0056b3;
+    height: 150px;
+    width: 100%;
+}
+
+.profile-header-content {
+    padding: 0 30px 20px 30px; /* More padding for a cleaner look */
+    position: relative;
+    display: flex; /* Helps align the text and pic */
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px; /* Floats half-way into the blue banner */
+    left: 30px;
+    object-fit: cover;
+    background: white; /* Ensures no transparency overlap */
+    z-index: 10;
+}
+
+.profile-info {
+    margin-top: 75px; /* Space created for the absolute photo */
+    padding-top: 10px;
+    clear: both;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Add this to style the new headline and education fields properly */
+#profile-occupation {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+#profile-education {
+    display: inline-block;
+    background: #f0f8ff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.profile-bio-section {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+/* ========================================= */
+/* TAG INPUT MODULE                          */
+/* ========================================= */
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 45px;
+    cursor: text;
+    background: white;
+    margin-bottom: 15px;
+}
+
+.tag-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 150px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.tag-bubble {
+    background: #0056b3;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag-bubble span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tag-bubble span:hover {
+    color: #ff9900;
+}
+
+/* ========================================= */
+/* ONBOARDING PROGRESS WIZARD                */
+/* ========================================= */
+
+.progress-wizard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.progress-step {
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress-step.completed {
+    color: #28a745; /* Green for done */
+}
+
+.progress-step.active {
+    color: #0056b3; /* Blue for current */
+}
+
+/* Draws a line between the steps */
+.progress-divider {
+    height: 2px;
+    flex: 1;
+    background: #ddd;
+    margin: 0 15px;
+}
+/* ========================================= */
+/* ONBOARDING PROGRESS WIZARD                */
+/* ========================================= */
+
+.progress-wizard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+
+.progress-step {
+    font-size: 13px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.progress-step.completed {
+    color: #28a745; /* Green */
+}
+
+.progress-step.active {
+    color: #0056b3; /* Blue */
+}
+
+.progress-divider {
+    height: 2px;
+    flex: 1;
+    background: #ddd;
+    margin: 0 10px;
+}

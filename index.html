@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutor Me | Find The Perfect Educator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="index.html" id="nav-home">Home</a>
+            <a href="login.html" id="nav-login">Login</a>
+            <a href="register.html" id="nav-join">Join</a>
+            <a href="#" id="nav-dashboard" style="display: none;">Dashboard</a>
+            <a href="#" id="nav-logout" style="display: none;" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Find The Perfect Educator</h1>
+        <p>Master any subject with expert tutors online or in-person.</p>
+        <div class="search-bar" style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+            <input type="text" id="home-search-input" placeholder="What do you want to learn?" class="fullInput" style="max-width: 400px;">
+            <button class="btn" onclick="executeHomeSearch()">Search</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

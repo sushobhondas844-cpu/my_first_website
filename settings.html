@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+            <a href="#" id="nav-logout" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="dashboardContainer">
+        <div class="sidebar">
+            <h3>Settings</h3>
+            <a href="#" class="active">Account Security</a>
+            <a href="#">Notifications</a>
+            <a href="#">Billing Information</a>
+        </div>
+
+        <div class="mainContent">
+            <h2>Account Security</h2>
+            <p>Manage your login credentials and secure your account.</p>
+
+            <div class="managerBox">
+                <h3>Update Email</h3>
+                <p>Current Email:</p>
+                <input type="email" placeholder="student@example.com" class="fullInput">
+                <button class="btn btnSmall">Save New Email</button>
+                
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 25px 0;">
+
+                <h3>Change Password</h3>
+                <p>New Password:</p>
+                <input type="password" placeholder="Enter new password" class="fullInput">
+                
+                <p>Confirm New Password:</p>
+                <input type="password" placeholder="Confirm new password" class="fullInput">
+                
+                <br><br>
+                <button class="btn btnSmall">Update Password</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
