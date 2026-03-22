@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Tutor Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    
+    <div class="box" id="wizard-box" style="transition: all 0.3s ease;">
+        <h2>Join Tutor Me</h2>
+
+        <div class="progress-wizard" id="progress-bar" style="display: none;">
+            <div class="progress-step active" id="indicator-1">1. Account</div>
+            <div class="progress-divider"></div>
+            <div class="progress-step" id="indicator-2">2. Private Details</div>
+            <div class="progress-divider"></div>
+            <div class="progress-step" id="indicator-3">3. Profile</div>
+        </div>
+
+        <div id="step-1-content" style="display: block;">
+            <p>Select your account type:</p>
+            <div class="row">
+                <button class="btn role-btn active" onclick="selectRole(this, 'Student')">Student</button>
+                <button class="btn role-btn" onclick="selectRole(this, 'Educator')">Educator</button>
+            </div>
+            
+            <p>Email:</p>
+            <input type="email" id="email-input" class="fullInput">
+            
+            <p>Password:</p>
+            <input type="password" placeholder="Create Password" class="fullInput">
+            
+            <br><br>
+            <button class="btn full-width" id="step-1-btn" onclick="handleStep1()">Create Student Account</button>
+        </div>
+
+        <div id="step-2-content" style="display: none; text-align: left;">
+            <h3 style="color: #0056b3; margin-top: 0;">Private Information</h3>
+            <p style="font-size: 14px; color: #666; margin-top: -10px;">Securely stored for identity verification.</p>
+
+            <p>Full Legal Name:</p>
+            <input type="text" id="reg-legal-name" placeholder="Exactly as it appears on your ID" class="fullInput">
+
+            <p>Phone Number:</p>
+            <input type="tel" id="reg-phone" placeholder="+91 00000 00000" class="fullInput">
+
+            <p>Street Address:</p>
+            <input type="text" id="reg-street" placeholder="Street name and house/apartment" class="fullInput">
+
+            <div style="display: flex; gap: 15px;">
+                <div style="flex: 1;">
+                    <p>State/Province:</p>
+                    <input type="text" id="reg-state" class="fullInput">
+                </div>
+                <div style="flex: 1;">
+                    <p>ZIP / PIN Code:</p>
+                    <input type="text" id="reg-zip" class="fullInput">
+                </div>
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <button class="btn" style="background: #666;" onclick="goToStep(1)">⬅ Back</button>
+                <button class="btn" onclick="goToStep(3)">Next: Public Profile ➔</button>
+            </div>
+        </div>
+
+        <div id="step-3-content" style="display: none; text-align: left;">
+            <h3 style="color: #0056b3; margin-top: 0;">Public Directory Profile</h3>
+            <p style="font-size: 14px; color: #666; margin-top: -10px;">This is what students will see.</p>
+            
+            <p>Upload Profile Picture:</p>
+            <input type="file" id="reg-pic-file" accept="image/png, image/jpeg" class="fullInput" style="padding: 5px;">
+
+            <p>Public Display Name:</p>
+            <input type="text" id="reg-name" placeholder="e.g., Prof. Chen" class="fullInput">
+
+            <p>Professional Headline:</p>
+            <input type="text" id="reg-occupation" placeholder="e.g., Senior Software Engineer" class="fullInput">
+
+            <div style="display: flex; gap: 15px;">
+                <div style="flex: 1;">
+                    <p>Highest Education:</p>
+                    <input type="text" id="reg-education" placeholder="e.g., M.S. Physics" class="fullInput">
+                </div>
+                <div style="flex: 1;">
+                    <p>Hourly Rate ($):</p>
+                    <input type="number" id="reg-rate" placeholder="50" class="fullInput">
+                </div>
+            </div>
+
+            <p>Country & City:</p>
+            <div style="display: flex; gap: 15px;">
+                <select id="reg-country" class="fullInput" style="flex: 1;">
+                    <option value="" disabled selected>Country</option>
+                    <option value="India">India</option>
+                    <option value="United States">USA</option>
+                    <option value="United Kingdom">UK</option>
+                </select>
+                <input type="text" id="reg-location" placeholder="City" class="fullInput" style="flex: 1;">
+            </div>
+
+            <p>Subjects Taught:</p>
+            <div class="tag-container" id="subject-tag-container" onclick="document.getElementById('subject-input').focus()">
+                <input type="text" id="subject-input" placeholder="Type and press Enter...">
+            </div>
+
+            <p>Public Biography:</p>
+            <textarea id="reg-bio" class="fullInput" rows="3" placeholder="Tell students about yourself..."></textarea>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <button class="btn" style="background: #666;" onclick="goToStep(2)">⬅ Back</button>
+                <button class="btn" style="background: #28a745;" onclick="finishEducatorRegistration()">Complete Setup</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
