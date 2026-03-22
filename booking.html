@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book a Session | Tutor Me now </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="dashboard.html">My Dashboard</a>
+            <a href="#" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+    
+    <div class="box" style="width: 500px; margin-top: 50px;">
+        <h2 style="margin-bottom: 5px;">Book Your Session</h2>
+        <p style="color: #666; margin-bottom: 25px;">Select a time that works for you.</p>
+
+        <div id="booking-tutor-summary" style="background: #f0f8ff; padding: 15px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #d0e4f7; display: flex; align-items: center;">
+            <img src="" id="booking-tutor-pic" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 15px; display: none;">
+            <div>
+                <b id="booking-tutor-name" style="color: #0056b3; font-size: 18px;">Loading Tutor...</b>
+                <p id="booking-tutor-rate" style="margin: 0; font-size: 14px; color: #444;">$0 / hour</p>
+            </div>
+        </div>
+
+        <p><b>1. Select Date:</b></p>
+        <input type="date" id="booking-date" class="fullInput" style="margin-bottom: 20px;">
+        
+        <p><b>2. Select Time:</b></p>
+        <input type="time" id="booking-time" class="fullInput" style="margin-bottom: 30px;">
+        
+        <p style="font-size: 13px; color: #888; margin-bottom: 20px;">
+            * You will receive a meeting link via email once the tutor confirms.
+        </p>
+
+        <button class="btn full-width" onclick="handleBooking()" style="padding: 20px; font-size: 18px;">Confirm Booking</button>
+        <br><br>
+        <center><a href="directory.html" style="color: #666; text-decoration: none; font-size: 14px;">Cancel and go back</a></center>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Internal script to load the specific tutor being booked
+        document.addEventListener("DOMContentLoaded", function() {
+            const viewedTutorId = localStorage.getItem('viewingTutorId');
+            const tutorsDB = JSON.parse(localStorage.getItem('tutorsDB')) || [];
+            const tutor = tutorsDB.find(t => t.id === viewedTutorId);
+
+            if (tutor) {
+                document.getElementById('booking-tutor-name').innerText = tutor.name;
+                document.getElementById('booking-tutor-rate').innerText = "$" + tutor.rate + " / hour";
+                if (tutor.profilePic) {
+                    const pic = document.getElementById('booking-tutor-pic');
+                    pic.src = tutor.profilePic;
+                    pic.style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

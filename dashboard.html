@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard | Tutor Me</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="directory.html">Find Tutors</a>
+            <a href="#" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="dashboardContainer">
+        <div class="sidebar">
+            <h3>Student Portal</h3>
+            <a href="#" class="active">My Sessions</a>
+            <a href="directory.html">Search Directory</a>
+        </div>
+
+        <div class="mainContent">
+            <h2 id="welcome-message">Welcome back!</h2>
+            <p>Manage your learning schedule</p>
+            <h3 style="margin-top: 30px; color: #0056b3;">Upcoming Sessions</h3>
+            <hr style="border: 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
+            <div id="session-list-container">
+                <p style="color: #888;">No sessions booked yet! <a href="directory.html" style="color: #0056b3;">Find a tutor</a> to get started!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                document.getElementById('welcome-message').innerText = "Welcome, " + userEmail.split('@')[0] + "!";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Educator Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="tutorProfile.html">View Public Profile</a>
+            <a href="#" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="dashboardContainer">
+        <div class="sidebar">
+            <h3>Educator Portal</h3>
+            <a href="#" class="active">Profile Settings</a>
+            <a href="messages.html">Messages</a> <a href="#">Manage Schedule</a>
+            <a href="#">Earnings</a>
+        </div>
+
+        <div class="mainContent">
+            <h2>Profile Settings</h2>
+            <p>Keep your details up to date to attract more students.</p>
+
+            <h3 style="color: #0056b3; margin-top: 30px;">Public Profile</h3>
+            
+            <div class="managerBox">
+                <p>Update Profile Picture (Keep under 100kb for testing):</p>
+                <input type="file" id="manager-pic-file" accept="image/png, image/jpeg" class="fullInput" style="padding: 5px;">
+
+                <p>Public Display Name:</p>
+                <input type="text" id="manager-name" class="fullInput">
+
+                <p>Professional Headline / Occupation:</p>
+                <input type="text" id="manager-occupation" class="fullInput">
+
+                <div style="display: flex; gap: 15px;">
+                    <div style="flex: 1;">
+                        <p>Highest Education:</p>
+                        <input type="text" id="manager-education" class="fullInput">
+                    </div>
+                    <div style="flex: 1;">
+                        <p>Hourly Rate ($):</p>
+                        <input type="number" id="manager-rate" class="fullInput">
+                    </div>
+                </div>
+
+                <p>Country & City:</p>
+                <div style="display: flex; gap: 15px;">
+                    <select id="manager-country" class="fullInput" style="flex: 1;">
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                    <input type="text" id="manager-public-location" class="fullInput" style="flex: 1;">
+                </div>
+
+                <p>Subjects Taught:</p>
+                <div class="tag-container" id="subject-tag-container" onclick="document.getElementById('subject-input').focus()">
+                    <input type="text" id="subject-input" placeholder="Type a subject and press Enter">
+                </div>
+
+                <p>Public Biography:</p>
+                <textarea id="manager-bio" class="fullInput" rows="4"></textarea>
+            </div>
+
+            <h3 style="color: #0056b3; margin-top: 40px;">Private Information</h3>
+
+            <div class="managerBox">
+                <p>Full Legal Name:</p>
+                <input type="text" id="manager-legal-name" class="fullInput">
+
+                <p>Phone Number:</p>
+                <input type="tel" id="manager-phone" class="fullInput">
+
+                <p>Street Address:</p>
+                <input type="text" id="manager-street" class="fullInput">
+
+                <div style="display: flex; gap: 15px;">
+                    <div style="flex: 1;">
+                        <p>State/Province:</p>
+                        <input type="text" id="manager-state" class="fullInput">
+                    </div>
+                    <div style="flex: 1;">
+                        <p>ZIP / PIN Code:</p>
+                        <input type="text" id="manager-zip" class="fullInput">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <button class="btn full-width" onclick="saveManagerProfile()" style="font-size: 18px; padding: 20px;">Save Profile Updates</button>
+            <br><br><br>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
