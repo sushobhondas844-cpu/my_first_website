@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messages | Tutor Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+            <a href="#" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="dashboardContainer">
+        <div class="sidebar" style="padding: 10px;">
+            <h3 style="padding-left: 10px;">Conversations</h3>
+            <div id="convo-list">
+                <p style="padding: 10px; font-size: 14px; color: #888;">No messages yet.</p>
+            </div>
+        </div>
+
+        <div class="mainContent">
+            <div id="chat-window" style="background: white; border: 1px solid #ddd; border-radius: 8px; display: flex; flex-direction: column; height: 500px;">
+                <div style="padding: 15px; border-bottom: 1px solid #ddd; background: #f8f9fa; border-radius: 8px 8px 0 0;">
+                    <b id="chat-with-name">Select a conversation</b>
+                </div>
+
+                <div id="message-display" style="flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
+                    </div>
+
+                <div style="padding: 15px; border-top: 1px solid #ddd; display: flex; gap: 10px;">
+                    <input type="text" id="chat-input" placeholder="Type your message..." style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <button class="btn btnSmall" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Start the message engine when page loads
+        document.addEventListener("DOMContentLoaded", renderConversations);
+    </script>
+</body>
+</html>
