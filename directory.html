@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Directory | Tutor Me</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="brand" style="text-decoration: none;">Tutor Me</a>
+        <div class="nav">
+            <a href="index.html" id="nav-home">Home</a>
+            <a href="login.html" id="nav-login">Login</a>
+            <a href="register.html" id="nav-join">Join</a>
+            <a href="#" id="nav-dashboard" style="display: none;">Dashboard</a>
+            <a href="#" id="nav-logout" style="display: none;" onclick="handleLogout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="directoryContainer">
+        <div class="filterSidebar">
+            <h3>Find a Tutor</h3>
+            <p>Search:</p>
+            <input type="text" id="search-input" placeholder="Name or subject" class="fullInput" style="margin-bottom: 15px;">
+            <button class="btn full-width" onclick="handleSearch()">Search Directory</button>
+        </div>
+
+        <div id="directory-grid" class="resultsGrid">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
